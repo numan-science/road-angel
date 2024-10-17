@@ -1,0 +1,15 @@
+{
+  "name": "sic",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "web:start": "cd packages/webapp && yarn start",
+    "server:start": "cd packages/server && yarn start:dev",
+    "server:start:prod": "cd packages/server && yarn build && yarn start:prod"
+  },
+  "devDependencies": {
+    "lerna": "6.0.1"
+  }
+}

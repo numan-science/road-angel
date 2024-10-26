@@ -18,7 +18,7 @@ BaseService.interceptors.request.use(
     const rawPersistData = localStorage.getItem(PERSIST_STORE_NAME);
     const persistData = deepParseJson(rawPersistData);
 
-    const accessToken = persistData.auth.session.token;
+    const accessToken = persistData?.auth?.session?.token;
 
     if (accessToken) {
       config.headers[REQUEST_HEADER_AUTH_KEY] = `${TOKEN_TYPE}${accessToken}`;
@@ -36,7 +36,7 @@ BaseService.interceptors.response.use(
   (error) => {
     const { response } = error;
 
-    if (response && unauthorizedCode.includes(response.status)) {
+    if (response && unauthorizedCode?.includes(response.status)) {
       store.dispatch(onSignOutSuccess());
     }
 

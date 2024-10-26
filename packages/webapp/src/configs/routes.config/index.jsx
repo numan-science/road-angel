@@ -13,6 +13,18 @@ export const protectedRoutes = [
         component: React.lazy(() => import('@/views/dashboard')),
         authority: [],
     },
+	{
+        key: 'survey',
+        path: '/survey',
+        component: React.lazy(() => import('@/views/survey')),
+        authority: [],
+    },
+	{
+        key: 'resource Sharing Platform',
+        path: '/resource Sharing Platform',
+        component: React.lazy(() => import('@/views/resource-sharing-platform')),
+        authority: [],
+    },
     {
 		key: "role",
 		path: "/role",

@@ -16,7 +16,6 @@ const sequelizeOptions: any = {
 
 export const databaseProviders = [
   {
-    
     provide: 'SEQUELIZE',
     useFactory: async () => {
       let sequelize: any = {};

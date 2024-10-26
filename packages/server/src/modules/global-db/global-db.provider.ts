@@ -26,6 +26,7 @@ import { BusinessCaseDocuments } from '../business-case/entities/business-case-d
 import { BusinessCaseTowService } from '../business-case/entities/business-case-tow-service.entity';
 import { UserRegion } from '../user/entities/user-region.entity';
 import { AccidentCaseDocuments } from '../accident-case/entities/accident-case-documents.entity';
+import { ResourceSharing } from '../resource-sharing/entities/resource-sharing.entity';
 
 export const globalDbProvider = [
   TransactionInterceptor,
@@ -151,6 +152,11 @@ export const globalDbProvider = [
 
     provide: REPOSITORIES.ACCIDENTCASEDOCUMENTS_REPOSITORY,
     useValue:AccidentCaseDocuments,
+  },
+  {
+
+    provide: REPOSITORIES.RESOURCESHARING_REPOSITORY,
+    useValue:ResourceSharing,
   },
  
  

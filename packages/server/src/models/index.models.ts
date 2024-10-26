@@ -23,6 +23,7 @@ import { BusinessCaseDocuments } from 'src/modules/business-case/entities/busine
 import { BusinessCaseTowService } from 'src/modules/business-case/entities/business-case-tow-service.entity';
 import { UserRegion } from 'src/modules/user/entities/user-region.entity';
 import { AccidentCaseDocuments } from 'src/modules/accident-case/entities/accident-case-documents.entity';
+import { ResourceSharing } from 'src/modules/resource-sharing/entities/resource-sharing.entity';
 
 
 const models = [
@@ -50,7 +51,8 @@ const models = [
   BusinessCaseDocuments,
   BusinessCaseTowService,
   UserRegion,
-  AccidentCaseDocuments
+  AccidentCaseDocuments,
+  ResourceSharing
 ];
 
 export const appModels = models;

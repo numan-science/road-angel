@@ -15,6 +15,7 @@ import { InsuranceCompanyUserModule } from './modules/insurance-companies-user/i
 import { AccidentCaseModule } from './modules/accident-case/accident-case.module';
 import { LeasingInsuranceCompanyModule } from './modules/leasing-insurance-companies/leasing-insurance-companies.module';
 import { BusinessCaseModule } from './modules/business-case/business-case.module';
+import { ResourceSharingModule } from './modules/resource-sharing/resource-sharing.module';
 
 
 @Module({
@@ -35,7 +36,8 @@ import { BusinessCaseModule } from './modules/business-case/business-case.module
     InsuranceCompanyUserModule,
     AccidentCaseModule,
     LeasingInsuranceCompanyModule,
-    BusinessCaseModule
+    BusinessCaseModule,
+    ResourceSharingModule
     
   ],
   controllers: [],

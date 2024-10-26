@@ -33,6 +33,7 @@ import { BusinessCaseDocuments } from '../business-case/entities/business-case-d
 import { BusinessCaseTowService } from '../business-case/entities/business-case-tow-service.entity';
 import { UserRegion } from '../user/entities/user-region.entity';
 import { AccidentCaseDocuments } from '../accident-case/entities/accident-case-documents.entity';
+import { ResourceSharing } from '../resource-sharing/entities/resource-sharing.entity';
 
 @Injectable()
 export class GlobalDbService {
@@ -93,6 +94,9 @@ export class GlobalDbService {
     private readonly UserRegionRepository: typeof UserRegion,
     @Inject(REPOSITORIES.ACCIDENTCASEDOCUMENTS_REPOSITORY)
     private readonly AccidentCaseDocumentsRepository: typeof AccidentCaseDocuments,
+    @Inject(REPOSITORIES.RESOURCESHARING_REPOSITORY)
+    private readonly ResourceSharingRepository: typeof ResourceSharing,
+
   ) {
     this.repo['User'] = this.userRepository;
     this.repo['LoginToken'] = this.loginTokenRepository;
@@ -120,6 +124,7 @@ export class GlobalDbService {
     this.repo ['BusinessCaseTowService'] = this.BusinessCaseTowServiceRepository
     this.repo ['UserRegion'] = this.UserRegionRepository
     this.repo ['AccidentCaseDocuments'] = this.AccidentCaseDocumentsRepository
+    this.repo ['ResourceSharing'] = this.ResourceSharingRepository
 
 
   }
